@@ -1,0 +1,20 @@
+// Java Program to Calculate Average Using Arrays
+
+public class Main
+{
+	public static void main(String[] args) {
+	    double[] numArray = {1.2, 4.5, 3.6, 7.8, 5.4, 9.0, 6.6};
+	    
+	    double sum = 0.0;
+	    
+	    for(double num: numArray){
+	        sum = sum + num;
+	    }
+	    
+	    double average = sum/numArray.length;
+	    
+	    System.out.format("The average is: %.2f", average);
+	    
+	    
+	}
+}

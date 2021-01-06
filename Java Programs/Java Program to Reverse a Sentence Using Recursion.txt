@@ -1,16 +1,25 @@
-public class Reverse {
+// Java Program to Reverse a Sentence Using Recursion
 
-  public static void main(String[] args) {
-    String sentence = "Go work";
-    String reversed = reverse(sentence);
-    System.out.println("The reversed sentence is: " + reversed);
-  }
-
-  public static String reverse(String sentence) {
-    if (sentence.isEmpty())
-      return sentence;
-
-    return reverse(sentence.substring(1)) + sentence.charAt(0);
-  }
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    System.out.println("Enter a string: ");
+	    String sentence = reader.nextLine();
+	    
+	    String reversedSentence = reverse(sentence);
+	    
+	    System.out.println("The reversed sentence is: "+ reversedSentence);
+	    
+	}
+	
+	public static String reverse(String sentence){
+	    if (sentence.isEmpty()){
+	        return sentence;
+	    }
+	    else{
+	        return reverse(sentence.substring(1)) + sentence.charAt(0);
+	    }
+	}
 }
-

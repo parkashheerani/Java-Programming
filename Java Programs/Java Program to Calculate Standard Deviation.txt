@@ -1,0 +1,32 @@
+// Java Program to Calculate Standard Deviation
+
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    double[] arr = {2,4,3,5,6,7,8,9,4,3,2};
+	    
+	    double StandardDeviation = SD(arr);
+	    
+	    System.out.println("The Standard Deviation: " + StandardDeviation);
+	    
+	}
+	
+	public static double SD(double arr[]){
+	    double sum = 0, StandardDeviation = 0;
+	    int length = arr.length;
+	    
+	    for(double num: arr){
+	        sum += num;
+	}
+	
+	double mean = sum/length;
+	
+	for(double num: arr){
+	    StandardDeviation = StandardDeviation + Math.pow(num-mean, 2);
+	}
+	
+	return Math.sqrt((StandardDeviation/length));
+}
+}

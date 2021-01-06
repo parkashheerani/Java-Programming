@@ -1,0 +1,41 @@
+// Java Program to Convert Octal to Binary
+
+import java.util.Scanner;
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    
+	    System.out.println("Enter an octal number: ");
+	    int octal = reader.nextInt();
+	    
+	    long binary = octalToBinary(octal);
+	    
+	    System.out.println("The binary value of an octal number " + octal  + " is " + binary);
+	    
+	}
+	
+	public static long octalToBinary(int octalNumber){
+	    int decimalNumber = 0, i = 0;
+	    long binaryNumber = 0;
+	    
+	    while(octalNumber != 0){
+	        int remainder = octalNumber%10;
+	        decimalNumber = decimalNumber + remainder * (int)Math.pow(8, i);
+	        ++i;
+	        octalNumber = octalNumber/10;
+	    }
+	    
+	    i = 1;
+	    
+	    while(decimalNumber != 0){
+	        int remainder = decimalNumber%2;
+	        binaryNumber = binaryNumber + remainder*i;
+	         i = i * 10;
+	         decimalNumber = decimalNumber/2;
+	    }
+	    
+	    return binaryNumber;
+	}
+}

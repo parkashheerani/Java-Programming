@@ -1,0 +1,30 @@
+// Java Program to calculate the power using recursion
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    System.out.println("Enter base: ");
+	    int base = reader.nextInt();
+	    
+	    System.out.println("Enter power: ");
+	    int raisedPower = reader.nextInt();
+	    
+	    int result = power(base, raisedPower);
+	    
+	    System.out.printf("%d^%d = %d",base, raisedPower, result);
+	    
+	}
+	
+	public static int power(int base, int raisedPower){
+	    
+	    if(raisedPower == 0){
+	        return 1;
+	    }
+	    else{
+	        return base * power(base, raisedPower-1);
+	    }
+	}
+
+}

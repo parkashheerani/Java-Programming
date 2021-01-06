@@ -1,0 +1,51 @@
+// Java Program to print Inverted half pyramid
+
+
+// with charactors
+public class Main
+{
+	public static void main(String[] args) {
+        int rows = 6;
+        // "A" = 65
+        for(int i = rows; i>=1; i--){
+            for(int j = 0; j<=i; j++){
+                System.out.print((char)(j+65) + " ");
+            }
+            System.out.println();
+        }
+        
+	}
+}
+
+// with numbers
+public class Main
+{
+	public static void main(String[] args) {
+        int rows = 6;
+        // "A" = 65
+        for(int i = rows; i>=1; i--){
+            for(int j = 0; j<=i; j++){
+                System.out.print(j+ " ");
+            }
+            System.out.println();
+        }
+        
+	}
+}
+
+// with *
+public class Main
+{
+	public static void main(String[] args) {
+        int rows = 6;
+        // "A" = 65
+        for(int i = rows; i>=1; i--){
+            for(int j = 0; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+	}
+}
+

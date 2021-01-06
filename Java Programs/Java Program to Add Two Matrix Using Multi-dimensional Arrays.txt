@@ -1,0 +1,29 @@
+// Java Program to Add Two Matrix Using Multi-dimensional Arrays
+
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	   int rows = 2, columns = 3;
+	   
+	   int[][] M1 = {{1,2,3},{7,8,9}};
+	   int[][] M2 = {{4,5,6}, {1,2,4}};
+	   
+	   int[][] sum = new int[rows][columns];
+	   
+	   for(int i = 0; i<rows; i++){
+	       for(int j = 0; j<columns; j++){
+	           sum[i][j] = M1[i][j] + M2[i][j];
+	       }
+	   }
+	   
+	   System.out.println("The sum of two matrices is: ");
+	   
+	   for(int[] row: sum){
+	       for(int column : row){
+	           System.out.print(column + "\t");
+	       }
+	       System.out.println();
+	   }
+    }
+}

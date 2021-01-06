@@ -1,0 +1,46 @@
+// Java Program to Calculate Difference Between Two Time Periods
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Time start = new Time(10, 30, 15);
+	    Time stop  = new Time(15, 10, 5);
+	    
+	    Time difference = Time.Difference(start, stop);
+	    
+	    System.out.printf("Time difference: %d:%d:%d", difference.hours, difference.minutes, difference.seconds);
+	}
+}
+
+class Time{
+    int seconds;
+    int minutes;
+    int hours;
+    
+    public Time(int hours, int minutes, int seconds){
+        this.seconds = seconds;
+        this.minutes = minutes;
+        this.hours = hours;
+    }
+    
+    
+    public static Time Difference(Time start, Time stop){
+        Time diff = new Time(0, 0, 0);
+        
+        if(start.seconds > stop.seconds){
+            --stop.minutes;
+            stop.seconds += 60;
+        }
+        
+        diff.seconds = stop.seconds - start.seconds;
+        
+        if(start.minutes > stop.minutes){
+            --stop.hours;
+            stop.minutes += 60;
+        }
+        diff.minutes = stop.minutes - start.minutes;
+        diff.hours = stop.hours - start.hours;
+        
+        return diff;
+    }
+}

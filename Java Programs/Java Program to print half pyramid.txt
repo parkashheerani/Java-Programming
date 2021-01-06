@@ -1,0 +1,52 @@
+// Java Programs to print triangles using *, numbers, and characters
+
+
+// Characters
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int rows = 7;
+	    
+	    // "A" = 65
+	    for(int i=0; i<rows; i++){
+	        for(int j = 0; j<=i ; j++){
+	            System.out.print((char)(j+65) + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+// Numbers
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int rows = 7;
+	    
+	    for(int i=0; i<rows; i++){
+	        for(int j = 0; j<=i ; j++){
+	            System.out.print(j + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+// with *
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int rows = 7;
+	    
+	    for(int i=0; i<rows; i++){
+	        for(int j = 0; j<=i ; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+

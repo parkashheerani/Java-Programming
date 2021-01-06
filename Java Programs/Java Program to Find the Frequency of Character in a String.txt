@@ -1,0 +1,25 @@
+// Java Program to Find the Frequency of Character in a String
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner reader = new Scanner(System.in);
+	    System.out.println("Enter a String: ");
+	    String sentence = reader.nextLine();
+	    
+	    System.out.println("Enter a Character: ");
+	    char c = reader.next().charAt(0);
+	    
+	    int Frequency = 0;
+	    
+	    for(int i=0; i<sentence.length(); i++){
+	        if(c == sentence.charAt(i)){
+	            ++Frequency;
+	        }
+	    }
+	    
+	    System.out.println("The Frequency of "+c+" is " + Frequency);
+	    
+    }
+}

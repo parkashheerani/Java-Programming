@@ -1,0 +1,31 @@
+// Java Program to Add Two Complex Numbers by Passing Class to a Function
+
+public class Main
+{
+    
+    double real;
+    double imag;
+    
+    public Main(double real, double imag){
+        this.real = real;
+        this.imag = imag;
+    }
+    
+	public static void main(String[] args) {
+		Main n1 = new Main(2.5, 4.5);
+		Main n2 = new Main(3.4, 2.6);
+		
+		Main addition = add(n1, n2);
+		
+		System.out.printf("Sum = %.1f + %.1fi", addition.real, addition.imag);
+	}
+	
+	public static Main add(Main n1, Main n2){
+	    Main temp = new Main(0.0, 0.0);
+	    
+	    temp.real = n1.real + n2.real;
+	    temp.imag = n1.imag + n2.imag;
+	    
+	    return temp;
+	}
+}
