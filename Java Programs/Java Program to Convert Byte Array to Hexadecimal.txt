@@ -1,0 +1,13 @@
+// Java Program to Convert Byte Array to Hexadecimal
+
+public class Main
+{
+	public static void main(String[] args) {
+	   byte[] bytes = {2, 10, 11, 15, 16};
+	   
+	   for(byte b: bytes){
+	       String s = String.format("%02X", b);
+	       System.out.print(s);
+	   }
+	}
+}

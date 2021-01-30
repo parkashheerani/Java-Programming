@@ -1,0 +1,32 @@
+// Method 1
+
+// Java Program to Get Current Working Directory
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+  String path = System.getProperty("user.dir");
+        
+        System.out.println("Working Directory = " + path);	    
+	}
+}
+
+
+
+// Method 2
+
+// Java Program to Get Current Working Directory
+
+import java.nio.file.Paths;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String path = Paths.get("").toAbsolutePath().toString();
+	    
+	    System.out.println("The current Directory is: " + path);
+	    
+	}
+}

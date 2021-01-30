@@ -1,0 +1,14 @@
+// Java Program to Convert Milliseconds to Minutes and Seconds
+
+public class Main
+{
+	public static void main(String[] args) {
+	    long Milliseconds = 1000000;
+	    
+	    long minutes = (Milliseconds / 1000) / 60;
+	    long seconds = (Milliseconds / 1000) % 60;
+	    
+	    System.out.format("%d Milliseconds = %d minutes and %d seconds", Milliseconds, minutes, seconds);
+	    
+	}
+}

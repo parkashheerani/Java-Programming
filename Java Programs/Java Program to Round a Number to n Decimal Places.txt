@@ -1,0 +1,19 @@
+// Java Program to Round a Number to n Decimal Places
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+public class Main
+{
+	public static void main(String[] args) {
+	    double number = 1.4564234234645;
+	    // System.out.format("%.2f", number);
+	    DecimalFormat df = new DecimalFormat("#.##");
+	    
+	    df.setRoundingMode(RoundingMode.CEILING);
+	    
+	    System.out.println(df.format(number));
+	    
+	    
+	    
+	}
+}

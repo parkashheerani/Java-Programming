@@ -1,0 +1,19 @@
+// Java Program to Convert Set to Array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Set<String> set = new HashSet<>();
+	    
+	    set.add("Python");
+	    set.add("Java");
+	    set.add("Programming");
+	    
+	    String[] arr = new String[set.size()];
+	    
+	    set.toArray(arr);
+	    
+	    System.out.println("The array is: " + Arrays.toString(arr));
+	}
+}

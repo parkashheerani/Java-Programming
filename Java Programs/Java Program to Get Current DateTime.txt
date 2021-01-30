@@ -1,0 +1,17 @@
+// Java Program to Get Current Date/Time
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    LocalDateTime current = LocalDateTime.now();
+	    
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss-SS");
+	    
+	    String currentDate = current.format(formatter);
+	    
+	    System.out.println("The current date and time is: " + currentDate);
+	}
+}

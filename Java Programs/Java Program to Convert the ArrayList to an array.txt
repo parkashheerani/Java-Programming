@@ -1,0 +1,49 @@
+// ArrayList into Array
+
+// Java Program to Convert the ArrayList to an array and vice versa
+
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    ArrayList<String> ProgLanguages = new ArrayList<>();
+	    
+	    ProgLanguages.add("Java");
+	    ProgLanguages.add("Python");
+	    ProgLanguages.add("C++");
+	    
+	    System.out.println("Arraylist: " + ProgLanguages);
+	    
+	    String[] arr = new String[ProgLanguages.size()];
+	    
+	    ProgLanguages.toArray(arr);
+	    
+	    System.out.println("Array is: ");
+	    for(String element: arr){
+	        System.out.print(element + " ");
+	    }
+	    
+	}
+}
+
+
+// Array into ArrayList
+
+// Java Program to Convert the ArrayList to an array and vice versa
+
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String [] arr = {"Java", "Python", "C", "C++"};
+	    
+	    System.out.println("Array is: " + Arrays.toString(arr));
+	    
+	    ArrayList<String> languages = new ArrayList<>(Arrays.asList(arr));
+	    
+	    System.out.println("ArrayList is: " + languages);
+	}
+}
